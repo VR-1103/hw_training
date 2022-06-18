@@ -17,33 +17,12 @@ def callback(data):
     elif(data.axes[1] > 0.1):
         joyInfo.publish('FORWARD')
 
-    #logic in if statements
-    #abc.publsih(data)
-
 
 def listener():
     rospy.init_node('listener', anonymous=True)
     rospy.Subscriber('/joy', Joy , callback)
 
     rospy.spin()
-
-##def talker():
-    ##rospy.init_node('talker' , anonymous=True)
     
-
 if __name__ == '__main__':
-    ##talker()
     listener()
-
-'''if (axes[1] >= 0.1):
-            driver1.FORWARDM1(axes[1]*100/0.9)
-            driver2.FORWARDM2(axes[1]*100/0.9)
-        elif (axes[1] <= -0.1):
-            driver1.BACKWARDM1(axes[1]*100/0.9)
-            driver2.BACKWARDM2(axes[1]*100/0.9)
-        elif (axes[0] <= -0.1):
-            driver1.BACKWARDM1(axes[0]*100/0.9)
-            driver2.FORWARDM2(axes[0]*100/0.9)
-        elif (axes[0] >= 0.1):
-            driver1.FORWARDM1(axes[0]*100/0.9)
-            driver2.BACKWARDM2(axes[0]*100/0.9)'''
