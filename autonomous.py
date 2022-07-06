@@ -46,7 +46,10 @@ class Drive:
         Try to implement this function as well. It is a saftey feature. 
         How would you decide the current threshold? - Please elaborate
         """
-        return False
+        if (driver1.GETCURRENTS < 4A) && (driver2.GETCURRENTS < 4A):
+            return False
+        else:
+            return True
                 
 
 #---------------------------------------------------                
